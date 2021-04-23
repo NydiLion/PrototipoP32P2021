@@ -12,7 +12,8 @@ import javax.swing.JOptionPane;
  * @author Nay Ale
  */
 public class Contenedor_MDI_FM extends javax.swing.JFrame {
-
+private MantenimientoClientes MantenimientoClientes;//llamado a la ventana Mantenimiento Banco
+  //private Mantenimiento_TipoPersona formMantenimiento_TipoPersona;//llamado a la ventana Mantenimiento Tipo Persona
     /**
      * Creates new form Contenedor_MDI_FM
      */
@@ -29,16 +30,28 @@ public class Contenedor_MDI_FM extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenu1 = new javax.swing.JMenu();
         jDesktopPane1 = new javax.swing.JDesktopPane();
-        jMenuBar2 = new javax.swing.JMenuBar();
-        jMenu3 = new javax.swing.JMenu();
-        MenuUsuriao = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
-        jMenuAsigCurAlum = new javax.swing.JMenu();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        MenuArchivo = new javax.swing.JMenu();
+        MenuSalir = new javax.swing.JMenuItem();
+        MenuCatalogos = new javax.swing.JMenu();
+        jMenu7 = new javax.swing.JMenu();
+        MenuPeliculas = new javax.swing.JMenuItem();
         jMenu9 = new javax.swing.JMenu();
+        MenuClientes = new javax.swing.JMenuItem();
         jMenu10 = new javax.swing.JMenu();
+        MenuEmpleados = new javax.swing.JMenuItem();
         jMenu11 = new javax.swing.JMenu();
-        jMenuSalida = new javax.swing.JMenuItem();
+        MenuTiendas = new javax.swing.JMenuItem();
+        MenuProcesos = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
+        Rentas_DVD = new javax.swing.JMenuItem();
+        MenuInformes = new javax.swing.JMenu();
+        MenuHerramientas = new javax.swing.JMenu();
+        MenuAyuda = new javax.swing.JMenu();
+
+        jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,46 +65,105 @@ public class Contenedor_MDI_FM extends javax.swing.JFrame {
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 460, Short.MAX_VALUE)
+            .addGap(0, 459, Short.MAX_VALUE)
         );
 
-        jMenu3.setText("Abrir");
+        MenuArchivo.setText("Archivo");
+        MenuArchivo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        MenuUsuriao.setText("Usuario");
-        MenuUsuriao.addActionListener(new java.awt.event.ActionListener() {
+        MenuSalir.setText("Cerrar Programa");
+        MenuSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MenuUsuriaoActionPerformed(evt);
+                MenuSalirActionPerformed(evt);
             }
         });
-        jMenu3.add(MenuUsuriao);
+        MenuArchivo.add(MenuSalir);
 
-        jMenuBar2.add(jMenu3);
+        jMenuBar1.add(MenuArchivo);
 
-        jMenu4.setText("Catalogos");
-        jMenuBar2.add(jMenu4);
+        MenuCatalogos.setText("Catalogos");
+        MenuCatalogos.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        jMenuAsigCurAlum.setText("Procesos");
-        jMenuBar2.add(jMenuAsigCurAlum);
+        jMenu7.setText("Peliculas");
 
-        jMenu9.setText("Informes");
-        jMenuBar2.add(jMenu9);
-
-        jMenu10.setText("Herramientas");
-        jMenuBar2.add(jMenu10);
-
-        jMenu11.setText("Ayuda");
-
-        jMenuSalida.setText("Salir ");
-        jMenuSalida.addActionListener(new java.awt.event.ActionListener() {
+        MenuPeliculas.setText("Mantenimiento Peliculas");
+        MenuPeliculas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuSalidaActionPerformed(evt);
+                MenuPeliculasActionPerformed(evt);
             }
         });
-        jMenu11.add(jMenuSalida);
+        jMenu7.add(MenuPeliculas);
 
-        jMenuBar2.add(jMenu11);
+        MenuCatalogos.add(jMenu7);
 
-        setJMenuBar(jMenuBar2);
+        jMenu9.setText("Clientes");
+
+        MenuClientes.setText("Mantenimiento  Clientes");
+        MenuClientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuClientesActionPerformed(evt);
+            }
+        });
+        jMenu9.add(MenuClientes);
+
+        MenuCatalogos.add(jMenu9);
+
+        jMenu10.setText("Empleados");
+
+        MenuEmpleados.setText("Mantenimiento de Empleados");
+        MenuEmpleados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuEmpleadosActionPerformed(evt);
+            }
+        });
+        jMenu10.add(MenuEmpleados);
+
+        MenuCatalogos.add(jMenu10);
+
+        jMenu11.setText("Tiendas");
+
+        MenuTiendas.setText("Mantenimiento de Tiendas");
+        MenuTiendas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuTiendasActionPerformed(evt);
+            }
+        });
+        jMenu11.add(MenuTiendas);
+
+        MenuCatalogos.add(jMenu11);
+
+        jMenuBar1.add(MenuCatalogos);
+
+        MenuProcesos.setText("Procesos");
+        MenuProcesos.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+
+        jMenu2.setText("Rentas");
+
+        Rentas_DVD.setText("Rentas DVD");
+        Rentas_DVD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Rentas_DVDActionPerformed(evt);
+            }
+        });
+        jMenu2.add(Rentas_DVD);
+
+        MenuProcesos.add(jMenu2);
+
+        jMenuBar1.add(MenuProcesos);
+
+        MenuInformes.setText("Informes");
+        MenuInformes.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMenuBar1.add(MenuInformes);
+
+        MenuHerramientas.setText("Herramientas");
+        MenuHerramientas.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMenuBar1.add(MenuHerramientas);
+
+        MenuAyuda.setText("Ayuda");
+        MenuAyuda.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMenuBar1.add(MenuAyuda);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -101,26 +173,45 @@ public class Contenedor_MDI_FM extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1)
+            .addComponent(jDesktopPane1, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void MenuUsuriaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuUsuriaoActionPerformed
-    
-    }//GEN-LAST:event_MenuUsuriaoActionPerformed
+    private void MenuSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuSalirActionPerformed
+        int respuesta_fm = JOptionPane.showConfirmDialog(this, "¿Desea cerrar el programa?", "Cerrar Programa", JOptionPane.YES_NO_OPTION);
 
-    private void jMenuSalidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuSalidaActionPerformed
-        /*===== OPERACIÓN CERRAR SESIÓN ====
-        Variable entera respuesta_cs*/
-
-        int respuesta_cs = JOptionPane.showConfirmDialog(this, "¿Desea Cerrar Sesión?", "Cerrar Sesión", JOptionPane.YES_NO_OPTION);
-
-        if (respuesta_cs == 0) {
+        if (respuesta_fm == 0) {
             this.dispose();
         }
-    }//GEN-LAST:event_jMenuSalidaActionPerformed
+    }//GEN-LAST:event_MenuSalirActionPerformed
+
+    private void MenuPeliculasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuPeliculasActionPerformed
+        Mantenimiento_Peliculas ventana = new Mantenimiento_Peliculas();
+        jDesktopPane1.add(ventana); 
+    }//GEN-LAST:event_MenuPeliculasActionPerformed
+
+    private void MenuClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuClientesActionPerformed
+   
+        MantenimientoClientes ventana = new MantenimientoClientes();
+        jDesktopPane1.add(ventana); 
+    }//GEN-LAST:event_MenuClientesActionPerformed
+
+    private void MenuTiendasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuTiendasActionPerformed
+     Mantenimiento_Tiendas ventana = new Mantenimiento_Tiendas();
+        jDesktopPane1.add(ventana); 
+    }//GEN-LAST:event_MenuTiendasActionPerformed
+
+    private void Rentas_DVDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Rentas_DVDActionPerformed
+       Proceso_Rentas ventana = new Proceso_Rentas();
+        jDesktopPane1.add(ventana); 
+    }//GEN-LAST:event_Rentas_DVDActionPerformed
+
+    private void MenuEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuEmpleadosActionPerformed
+       Mantenimiento_Empleado ventana = new Mantenimiento_Empleado();
+        jDesktopPane1.add(ventana); 
+    }//GEN-LAST:event_MenuEmpleadosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -158,15 +249,25 @@ public class Contenedor_MDI_FM extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuItem MenuUsuriao;
+    private javax.swing.JMenu MenuArchivo;
+    private javax.swing.JMenu MenuAyuda;
+    private javax.swing.JMenu MenuCatalogos;
+    private javax.swing.JMenuItem MenuClientes;
+    private javax.swing.JMenuItem MenuEmpleados;
+    private javax.swing.JMenu MenuHerramientas;
+    private javax.swing.JMenu MenuInformes;
+    private javax.swing.JMenuItem MenuPeliculas;
+    private javax.swing.JMenu MenuProcesos;
+    private javax.swing.JMenuItem MenuSalir;
+    private javax.swing.JMenuItem MenuTiendas;
+    private javax.swing.JMenuItem Rentas_DVD;
     private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu10;
     private javax.swing.JMenu jMenu11;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu7;
     private javax.swing.JMenu jMenu9;
-    private javax.swing.JMenu jMenuAsigCurAlum;
-    private javax.swing.JMenuBar jMenuBar2;
-    private javax.swing.JMenuItem jMenuSalida;
+    private javax.swing.JMenuBar jMenuBar1;
     // End of variables declaration//GEN-END:variables
 }

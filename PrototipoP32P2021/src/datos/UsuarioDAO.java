@@ -9,6 +9,7 @@ package datos;
  *
  * @author Nay Ale
  */
+import dominio.Conexion;
 import dominio.Usuario;
 import java.sql.*;
 import java.util.ArrayList;
