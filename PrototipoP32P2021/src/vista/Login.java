@@ -8,8 +8,10 @@ package vista;
 import datos.UsuarioDAO;
 import dominio.Usuario;
 import java.awt.HeadlessException;
-
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
+
+
 
 /**
  *
@@ -25,6 +27,7 @@ public class Login extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setSize(300, 200);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -46,11 +49,13 @@ public class Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel1.setText("Seguridad del Sistema");
 
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel2.setText("Usuario");
 
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel3.setText("Contraseña");
 
         txtUsuario.setName("txtUsuario"); // NOI18N
@@ -60,13 +65,14 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        btnAceptar.setLabel("Aceptar");
+        btnAceptar.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btnAceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAceptarActionPerformed(evt);
             }
         });
 
+        jButton2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jButton2.setText("Cancelar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,9 +100,9 @@ public class Login extends javax.swing.JFrame {
                                 .addComponent(btnAceptar)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton2))
-                            .addComponent(txtUsuario)
+                            .addComponent(txtUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)
                             .addComponent(txtContraseña))))
-                .addContainerGap(62, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -115,7 +121,7 @@ public class Login extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAceptar)
                     .addComponent(jButton2))
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -141,8 +147,8 @@ public class Login extends javax.swing.JFrame {
                 if (txtContraseña.getText().equals(usuarioAConsultar.getPassword()) && txtUsuario.getText().equals(usuarioAConsultar.getUsername())) {
                     JOptionPane.showMessageDialog(null, "Bienvenido\n", "Mensaje de bienvenida", JOptionPane.INFORMATION_MESSAGE);
 
-                    Contenedor_MDI_FM menuGeneral = new Contenedor_MDI_FM();
-                    menuGeneral.setVisible(true);
+                    //Contenedor_MDI_FM menuGeneral = new Contenedor_MDI_FM();
+                    //menuGeneral.setVisible(true);
                     this.dispose();
 
                 } else {

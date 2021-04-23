@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package datos;
+package dominio;
 
 
 import java.sql.*;
@@ -13,7 +13,7 @@ import java.sql.*;
  */
 public class Conexion {
    
-    private static final String JDBC_URL = "jdbc:mysql://localhost/LabFM?useSSL=false&serverTimezone=UTC";
+    private static final String JDBC_URL = "jdbc:mysql://localhost/LabFM3?useSSL=false&serverTimezone=UTC";
     private static final String JDBC_USER = "root";
     private static final String JDBC_PASS = "12345";
     
